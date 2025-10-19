@@ -1,35 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de la Página</title>
+    <title>Pina Maldonado - Arte Contemporáneo</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <style>
-        .carousel-container {
-            display: none;
-        }
-
-        .slick-initialized .carousel-container {
-            display: flex;
-        }
-
-        body.loading .carousel-container {
-            display: none;
-        }
-
-        body:not(.loading) .carousel-container {
-            display: flex;
-        }
-    </style>
 </head>
 <body class="loading">
     <main class="main-container">
         <header class="header">
             <a href="index.html">
-                <img loading="lazy" srcset="imagenes/firma3.png" class="image" alt="Descripción de la imagen de firma3" />
+                <img loading="lazy" srcset="imagenes/firma3.png" class="image" alt="Pina Maldonado - Arte Contemporáneo" />
             </a>
             <nav class="nav">
                 <a href="series.html" class="nav-link">SERIES</a>
@@ -42,16 +25,47 @@
         
         <div class="div-11">
             <div class="carousel-container">
-                <div><img src="imagenes/carusel1.JPG" alt="Descripción de la imagen 1"></div>
-                <div><img src="imagenes/carusel2.jpg" alt="Descripción de la imagen 2"></div>
-                <div><img src="imagenes/carusel3.jpg" alt="Descripción de la imagen 3"></div>
-                <div><img src="imagenes/carusel4.jpg" alt="Descripción de la imagen 4"></div>
-                <div><img src="imagenes/carusel5.jpg" alt="Descripción de la imagen 5"></div>
+                <div><img src="imagenes/carusel1.JPG" alt="Obra de arte 1"></div>
+                <div><img src="imagenes/carusel2.jpg" alt="Obra de arte 2"></div>
+                <div><img src="imagenes/carusel3.jpg" alt="Obra de arte 3"></div>
+                <div><img src="imagenes/carusel4.jpg" alt="Obra de arte 4"></div>
+                <div><img src="imagenes/carusel5.jpg" alt="Obra de arte 5"></div>
             </div>
         </div>
         
-        <!-- Resto de tu contenido HTML -->
-
+        <div class="div-12">
+            <div class="page-content">
+                <h1 class="section-title">Bienvenido a mi mundo artístico</h1>
+                <p>Explora mis series más recientes, exhibiciones pasadas y actuales, y descubre la historia detrás de cada obra. Mi trabajo explora la relación entre el color, la emoción y la experiencia humana en un mundo contemporáneo.</p>
+                
+                <div class="gallery-grid">
+                    <div class="artwork-card">
+                        <img src="imagenes/obra1.JPG" alt="Obra 1" class="artwork-image">
+                        <h3 class="artwork-title">Paisaje que Afecta I</h3>
+                        <div class="artwork-info">Óleo sobre lienzo, 60x80 cm</div>
+                        <p class="artwork-description">Una exploración visual de la relación entre el color y la emoción. Esta pieza captura la intensidad de los sentimientos humanos a través de una paleta vibrante y formas orgánicas.</p>
+                    </div>
+                    
+                    <div class="artwork-card">
+                        <img src="imagenes/obra2.JPG" alt="Obra 2" class="artwork-image">
+                        <h3 class="artwork-title">Paisaje que Afecta II</h3>
+                        <div class="artwork-info">Acrílico sobre madera, 50x70 cm</div>
+                        <p class="artwork-description">Representación introspectiva del entorno natural intervenido. Esta obra invita al espectador a reflexionar sobre nuestra relación con la naturaleza y cómo la transformamos.</p>
+                    </div>
+                    
+                    <div class="artwork-card">
+                        <img src="imagenes/obra3.JPG" alt="Obra 3" class="artwork-image">
+                        <h3 class="artwork-title">Fragmentos de Memoria</h3>
+                        <div class="artwork-info">Técnica mixta sobre tela, 70x90 cm</div>
+                        <p class="artwork-description">Una colección de recuerdos fragmentados que se entrelazan en un diálogo visual. Cada elemento representa un momento significativo en el proceso creativo.</p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-40">
+                    <a href="series.html" class="btn">Ver todas las series</a>
+                </div>
+            </div>
+        </div>
     </main>
     
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -59,6 +73,7 @@
     <script>
         $(document).ready(function() {
             $('body').removeClass('loading');
+            
             $('.carousel-container').slick({
                 dots: false,
                 infinite: true,
@@ -67,6 +82,8 @@
                 slidesToScroll: 1,
                 arrows: false,
                 swipe: true,
+                autoplay: true,
+                autoplaySpeed: 3000
             });
         });
     </script>
