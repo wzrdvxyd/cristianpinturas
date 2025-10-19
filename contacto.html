@@ -1,37 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de la Página</title>
-    <!-- Enlaza tus estilos CSS -->
+    <title>Contacto - Pina Maldonado</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <main class="main-container">
         <header class="header">
-            <!-- Envuelve la imagen con un enlace a la página de inicio -->
             <a href="index.html">
-                <img loading="lazy" srcset="imagenes/firma3.png" class="image" alt="Descripción de la imagen de firma3" />
+                <img loading="lazy" srcset="imagenes/firma3.png" class="image" alt="Pina Maldonado - Arte Contemporáneo" />
             </a>
-            <!-- Menú de navegación -->
             <nav class="nav">
                 <a href="series.html" class="nav-link">SERIES</a>
-                <a href="exposiciones.html" class="nav-link">EXPOSICIONES</a>
+                <a href="exhibiciones.html" class="nav-link">EXHIBICIONES</a>
                 <a href="acerca_de.html" class="nav-link">ACERCA DE</a>
                 <a href="contacto.html" class="nav-link">CONTACTO</a>
             </nav>
-            <!-- Botón para la tienda -->
             <button class="button"><a href="tienda.html" style="text-decoration:none; color: inherit;">TIENDA</a></button>
         </header>
         
-        <!-- Contenido de la página -->
-        <!-- ... Tu contenido va aquí ... -->
-
+        <div class="page-content">
+            <h1 class="section-title">Contacto</h1>
+            
+            <div class="contact-info">
+                <div style="display: flex; gap: 40px; margin-bottom: 50px;">
+                    <div style="flex: 1;">
+                        <h2>Información de Contacto</h2>
+                        <p><strong>Email:</strong> pina.maldonado@arte.com</p>
+                        <p><strong>Teléfono:</strong> +34 612 345 678</p>
+                        <p><strong>Estudio:</strong> Carrer de Gràcia, 123, 08012 Barcelona, España</p>
+                        <p><strong>Horario de estudio:</strong> Lunes a Viernes, 10:00 - 18:00</p>
+                    </div>
+                    
+                    <div style="flex: 1;">
+                        <h2>Redes Sociales</h2>
+                        <p><strong>Instagram:</strong> @pinamaldonado_art</p>
+                        <p><strong>Facebook:</strong> Pina Maldonado Arte</p>
+                        <p><strong>LinkedIn:</strong> Pina Maldonado</p>
+                        <p><strong>Behance:</strong> pinamaldonado</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Formulario de Contacto</h2>
+            <div class="contact-form">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre Completo</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <input type="text" id="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn" style="width: 100%;">Enviar Mensaje</button>
+                    </div>
+                </form>
+                <div id="form-alert" class="alert"></div>
+            </div>
+            
+            <h2 class="mb-50">Visitas al Estudio</h2>
+            <p>Estoy disponible para visitas al estudio previa cita. Si estás interesado en ver mi trabajo en persona o discutir posibles colaboraciones, por favor contáctame a través del formulario anterior o por email.</p>
+            <p>Para coleccionistas e instituciones, ofrezco visitas guiadas a mi estudio donde puedes ver obras en proceso y entender mejor mi proceso creativo.</p>
+        </div>
     </main>
     
-    <!-- Scripts y enlaces a bibliotecas externas -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <!-- Elimina el script del carrusel slick -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const alert = document.getElementById('form-alert');
+            alert.textContent = 'Gracias por tu mensaje. Te responderé lo antes posible.';
+            alert.style.display = 'block';
+            alert.style.backgroundColor = '#4CAF50';
+            this.reset();
+            
+            // Hide alert after 5 seconds
+            setTimeout(() => {
+                alert.style.display = 'none';
+            }, 5000);
+        });
+    </script>
 </body>
 </html>
