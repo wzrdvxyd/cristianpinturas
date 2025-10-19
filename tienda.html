@@ -8,18 +8,17 @@
 </head>
 <body>
     <main class="main-container">
-        <header class="header">
-            <a href="index.html">
-                <img loading="lazy" srcset="imagenes/firma3.png" class="image" alt="Christian Peña Maldonado" />
-            </a>
-            <nav class="nav">
-                <a href="series.html" class="nav-link">SERIES</a>
-                <a href="exhibiciones.html" class="nav-link">EXHIBICIONES</a>
-                <a href="acerca_de.html" class="nav-link">ACERCA DE</a>
-                <a href="contacto.html" class="nav-link">CONTACTO</a>
-            </nav>
-            <button class="button"><a href="tienda.html" style="text-decoration:none; color: inherit;">TIENDA</a></button>
-        </header>
+       <!-- INCLUYE EL HEADER DINÁMICAMENTE -->
+<div id="header-placeholder"></div>
+
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        })
+        .catch(err => console.error('Error al cargar header:', err));
+</script>
         
         <div class="page-content">
             <h1 class="section-title">Tienda de Arte</h1>
@@ -106,3 +105,4 @@
     </script>
 </body>
 </html>
+
