@@ -1,37 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de la Página</title>
-    <!-- Enlaza tus estilos CSS -->
+    <title>Exhibiciones - Pina Maldonado</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <main class="main-container">
         <header class="header">
-            <!-- Envuelve la imagen con un enlace a la página de inicio -->
             <a href="index.html">
-                <img loading="lazy" srcset="imagenes/firma3.png" class="image" alt="Descripción de la imagen de firma3" />
+                <img loading="lazy" srcset="imagenes/firma3.png" class="image" alt="Pina Maldonado - Arte Contemporáneo" />
             </a>
-            <!-- Menú de navegación -->
             <nav class="nav">
                 <a href="series.html" class="nav-link">SERIES</a>
-                <a href="exposiciones.html" class="nav-link">EXPOSICIONES</a>
+                <a href="exhibiciones.html" class="nav-link">EXHIBICIONES</a>
                 <a href="acerca_de.html" class="nav-link">ACERCA DE</a>
                 <a href="contacto.html" class="nav-link">CONTACTO</a>
             </nav>
-            <!-- Botón para la tienda -->
             <button class="button"><a href="tienda.html" style="text-decoration:none; color: inherit;">TIENDA</a></button>
         </header>
         
-        <!-- Contenido de la página -->
-        <!-- ... Tu contenido va aquí ... -->
-
+        <div class="page-content">
+            <h1 class="section-title">Exhibiciones Recientes</h1>
+            
+            <div class="exhibition-card">
+                <h2>Retrospectiva: 2018-2023</h2>
+                <div class="exhibition-date">Galería Arte Contemporáneo, Madrid | Enero - Marzo 2023</div>
+                <p>Una retrospectiva completa de mi trabajo durante los últimos cinco años, incluyendo obras de todas mis series principales. La exhibición fue inaugurada con una conferencia sobre el proceso creativo y la evolución de mi estilo.</p>
+            </div>
+            
+            <div class="exhibition-card">
+                <h2>Diálogos Visuales</h2>
+                <div class="exhibition-date">Centro Cultural Moderno, Barcelona | Junio - Agosto 2022</div>
+                <p>Exhibición conjunta con otros tres artistas contemporáneos, explorando temas comunes como la identidad, la memoria y el espacio. Cada artista presentó una serie nueva inspirada en el diálogo entre sus trabajos.</p>
+            </div>
+            
+            <div class="exhibition-card">
+                <h2>Fragmentos de Tiempo</h2>
+                <div class="exhibition-date">Museo de Arte Moderno, Valencia | Noviembre 2021 - Enero 2022</div>
+                <p>Una exhibición centrada en mi serie "Fragmentos de Memoria", con obras seleccionadas que exploran la relación entre tiempo, memoria y percepción. La exhibición incluyó instalaciones interactivas y proyecciones multimedia.</p>
+            </div>
+            
+            <h2 class="mb-50">Próximas Exhibiciones</h2>
+            
+            <div class="exhibition-card">
+                <h2>Horizontes Nuevos</h2>
+                <div class="exhibition-date">Galería Internacional, París | Abril - Junio 2024</div>
+                <p>Exhibición individual que presentará mi nueva serie "Memorias del Futuro". La muestra incluirá obras recién creadas y algunas piezas emblemáticas de mi carrera.</p>
+            </div>
+            
+            <div class="exhibition-card">
+                <h2>Diálogos Transatlánticos</h2>
+                <div class="exhibition-date">Museo de Arte Contemporáneo, Nueva York | Septiembre - Diciembre 2024</div>
+                <p>Exhibición colectiva que reúne a artistas de Europa y América, explorando temas de migración, identidad y cultura. Mi contribución será una instalación inmersiva basada en mi serie "Fragmentos de Identidad".</p>
+            </div>
+        </div>
     </main>
     
-    <!-- Scripts y enlaces a bibliotecas externas -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <!-- Elimina el script del carrusel slick -->
 </body>
 </html>
