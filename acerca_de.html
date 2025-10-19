@@ -1,37 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de la Página</title>
-    <!-- Enlaza tus estilos CSS -->
+    <title>Acerca de - Pina Maldonado</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <main class="main-container">
         <header class="header">
-            <!-- Envuelve la imagen con un enlace a la página de inicio -->
             <a href="index.html">
-                <img loading="lazy" srcset="imagenes/firma3.png" class="image" alt="Descripción de la imagen de firma3" />
+                <img loading="lazy" srcset="imagenes/firma3.png" class="image" alt="Pina Maldonado - Arte Contemporáneo" />
             </a>
-            <!-- Menú de navegación -->
             <nav class="nav">
                 <a href="series.html" class="nav-link">SERIES</a>
-                <a href="exposiciones.html" class="nav-link">EXPOSICIONES</a>
+                <a href="exhibiciones.html" class="nav-link">EXHIBICIONES</a>
                 <a href="acerca_de.html" class="nav-link">ACERCA DE</a>
                 <a href="contacto.html" class="nav-link">CONTACTO</a>
             </nav>
-            <!-- Botón para la tienda -->
             <button class="button"><a href="tienda.html" style="text-decoration:none; color: inherit;">TIENDA</a></button>
         </header>
         
-        <!-- Contenido de la página -->
-        <!-- ... Tu contenido va aquí ... -->
-
+        <div class="page-content">
+            <h1 class="section-title">Sobre mí</h1>
+            
+            <div class="about-content">
+                <img src="imagenes/acerca_de.jpg" alt="Pina Maldonado" class="about-image">
+                <div>
+                    <h2>Pina Maldonado</h2>
+                    <p>Nací en Barcelona en 1985 y desde muy joven mostré una inclinación por el arte visual. Estudié Bellas Artes en la Universidad de Barcelona, donde desarrollé mi interés por la pintura contemporánea y la experimentación con diferentes técnicas.</p>
+                    <p>Mi trabajo se centra en la exploración de las emociones humanas y su manifestación visual. Utilizo el color como lenguaje principal, creando composiciones que buscan conectar con el espectador a nivel emocional y sensorial.</p>
+                    <p>A lo largo de mi carrera he participado en numerosas exhibiciones tanto en España como en el extranjero, y mis obras forman parte de colecciones privadas y públicas en varios países.</p>
+                    <p>Actualmente vivo y trabajo en Barcelona, donde tengo mi estudio en el barrio de Gràcia. Cuando no estoy pintando, disfruto caminando por la ciudad, visitando museos y leyendo sobre teoría del arte y psicología.</p>
+                </div>
+            </div>
+            
+            <h2 class="mb-50">Filosofía Artística</h2>
+            <p>Mi trabajo se basa en la creencia de que el arte tiene el poder de transformar la percepción y generar empatía. Cada obra es un intento de capturar un momento emocional, una sensación o una idea abstracta, y darle forma visual para que pueda ser compartida y experimentada por otros.</p>
+            <p>Me interesa especialmente la relación entre el color y la emoción, y cómo diferentes combinaciones cromáticas pueden evocar respuestas emocionales específicas en el espectador. También exploro temas como la identidad, la memoria y la percepción del tiempo en mis series más recientes.</p>
+            
+            <h2>Premios y Reconocimientos</h2>
+            <ul>
+                <li>2023: Premio Nacional de Arte Contemporáneo</li>
+                <li>2022: Beca de Residencia Artística en Berlín</li>
+                <li>2021: Mención Especial en la Bienal de Arte Contemporáneo de Valencia</li>
+                <li>2020: Premio Joven Talento en la Feria de Arte Contemporáneo de Madrid</li>
+            </ul>
+        </div>
     </main>
     
-    <!-- Scripts y enlaces a bibliotecas externas -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <!-- Elimina el script del carrusel slick -->
 </body>
 </html>
