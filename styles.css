@@ -38,7 +38,6 @@ body {
     z-index: 1000;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
 /* Header se vuelve blanco puro y con sombra al scrollear */
 body.scrolled .header {
     background-color: white;
@@ -448,4 +447,5 @@ body:not(.loading) .carousel-container {
         padding: 40px 20px;
     }
 }
+
 
