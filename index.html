@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de la Página</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <style>
+        .carousel-container {
+            display: none;
+        }
+
+        .slick-initialized .carousel-container {
+            display: flex;
+        }
+
+        body.loading .carousel-container {
+            display: none;
+        }
+
+        body:not(.loading) .carousel-container {
+            display: flex;
+        }
+    </style>
+</head>
+<body class="loading">
+    <main class="main-container">
+        <header class="header">
+            <a href="index.html">
+                <img loading="lazy" srcset="imagenes/firma3.png" class="image" alt="Descripción de la imagen de firma3" />
+            </a>
+            <nav class="nav">
+                <a href="series.html" class="nav-link">SERIES</a>
+                <a href="exhibiciones.html" class="nav-link">EXHIBICIONES</a>
+                <a href="acerca_de.html" class="nav-link">ACERCA DE</a>
+                <a href="contacto.html" class="nav-link">CONTACTO</a>
+            </nav>
+            <button class="button"><a href="tienda.html" style="text-decoration:none; color: inherit;">TIENDA</a></button>
+        </header>
+        
+        <div class="div-11">
+            <div class="carousel-container">
+                <div><img src="imagenes/carusel1.JPG" alt="Descripción de la imagen 1"></div>
+                <div><img src="imagenes/carusel2.jpg" alt="Descripción de la imagen 2"></div>
+                <div><img src="imagenes/carusel3.jpg" alt="Descripción de la imagen 3"></div>
+                <div><img src="imagenes/carusel4.jpg" alt="Descripción de la imagen 4"></div>
+                <div><img src="imagenes/carusel5.jpg" alt="Descripción de la imagen 5"></div>
+            </div>
+        </div>
+        
+        <!-- Resto de tu contenido HTML -->
+
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('body').removeClass('loading');
+            $('.carousel-container').slick({
+                dots: false,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                swipe: true,
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.main-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: transparent;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 60px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 991px) {
+    .header {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+.image {
+    aspect-ratio: 3.45;
+    object-fit: contain;
+    object-position: center;
+    width: 214px;
+    max-width: 100%;
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    max-width: 1119px;
+    justify-content: flex-end;
+    gap: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .nav {
+        max-width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-link {
+        width: auto;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+}
+
+.nav-link {
+    color: #000;
+    font: 400 12px Inter, sans-serif;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #f0f0f0;
+}
+
+.button {
+    color: #000;
+    align-self: center;
+    margin: auto 0;
+    font: 400 15px Inter, sans-serif;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #f0f0f0;
+}
+
+.div-11 {
+    background-color: #00000000;
+    display: flex;
+    height: 700px;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.carousel-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.div-12 {
+    background-color: transparent;
+    display: flex;
+    min-height: 50px;
+    width: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+@media (max-width: 991px) {
+    .div-11,
+    .div-12 {
+        max-width: 100%;
+    }
+}

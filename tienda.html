@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="main-container">
+    <header class="header">
+      <!-- Logo enlazado al inicio -->
+      <a href="index.html">
+        <img loading="lazy" srcset="imagenes/firma3.png" class="image" alt="Firma del artista" />
+      </a>
+
+      <!-- Navegación -->
+      <nav class="nav">
+        <a href="series.html" class="nav-link">SERIES</a>
+        <a href="exposiciones.html" class="nav-link">EXPOSICIONES</a>
+        <a href="acerca_de.html" class="nav-link">ACERCA DE</a>
+        <a href="contacto.html" class="nav-link">CONTACTO</a>
+      </nav>
+
+      <!-- Botón de tienda -->
+      <button class="button">
+        <a href="tienda.html" style="text-decoration:none; color:inherit;">TIENDA</a>
+      </button>
+    </header>
+
+    <!-- Contenido principal -->
+    <section class="artworks-section">
+      <h2>Últimas Obras</h2>
+
+      <div class="artwork">
+        <img src="imagenes/obra1.jpg" alt="Obra 1" />
+        <h3>Paisaje que Afecta I</h3>
+        <p>Óleo sobre lienzo, 60x80 cm. Una exploración visual de la relación entre el color y la emoción.</p>
+      </div>
+
+      <div class="artwork">
+        <img src="imagenes/obra2.jpg" alt="Obra 2" />
+        <h3>Paisaje que Afecta II</h3>
+        <p>Acrílico sobre madera, 50x70 cm. Representación introspectiva del entorno natural intervenido.</p>
+      </div>
+
+      <p class="nota">*Estas son muestras estáticas representando obras disponibles.</p>
+    </section>
+  </main>
+
+  <!-- Scripts opcionales -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</body>
+</html>
