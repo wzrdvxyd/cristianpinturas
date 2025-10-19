@@ -1,54 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tienda</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Pina Maldonado</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="main-container">
-    <header class="header">
-      <!-- Logo enlazado al inicio -->
-      <a href="index.html">
-        <img loading="lazy" srcset="imagenes/firma3.png" class="image" alt="Firma del artista" />
-      </a>
-
-      <!-- Navegación -->
-      <nav class="nav">
-        <a href="series.html" class="nav-link">SERIES</a>
-        <a href="exposiciones.html" class="nav-link">EXPOSICIONES</a>
-        <a href="acerca_de.html" class="nav-link">ACERCA DE</a>
-        <a href="contacto.html" class="nav-link">CONTACTO</a>
-      </nav>
-
-      <!-- Botón de tienda -->
-      <button class="button">
-        <a href="tienda.html" style="text-decoration:none; color:inherit;">TIENDA</a>
-      </button>
-    </header>
-
-    <!-- Contenido principal -->
-    <section class="artworks-section">
-      <h2>Últimas Obras</h2>
-
-      <div class="artwork">
-        <img src="imagenes/obra1.jpg" alt="Obra 1" />
-        <h3>Paisaje que Afecta I</h3>
-        <p>Óleo sobre lienzo, 60x80 cm. Una exploración visual de la relación entre el color y la emoción.</p>
-      </div>
-
-      <div class="artwork">
-        <img src="imagenes/obra2.jpg" alt="Obra 2" />
-        <h3>Paisaje que Afecta II</h3>
-        <p>Acrílico sobre madera, 50x70 cm. Representación introspectiva del entorno natural intervenido.</p>
-      </div>
-
-      <p class="nota">*Estas son muestras estáticas representando obras disponibles.</p>
-    </section>
-  </main>
-
-  <!-- Scripts opcionales -->
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <main class="main-container">
+        <header class="header">
+            <a href="index.html">
+                <img loading="lazy" srcset="imagenes/firma3.png" class="image" alt="Pina Maldonado - Arte Contemporáneo" />
+            </a>
+            <nav class="nav">
+                <a href="series.html" class="nav-link">SERIES</a>
+                <a href="exhibiciones.html" class="nav-link">EXHIBICIONES</a>
+                <a href="acerca_de.html" class="nav-link">ACERCA DE</a>
+                <a href="contacto.html" class="nav-link">CONTACTO</a>
+            </nav>
+            <button class="button"><a href="tienda.html" style="text-decoration:none; color: inherit;">TIENDA</a></button>
+        </header>
+        
+        <div class="page-content">
+            <h1 class="section-title">Tienda de Arte</h1>
+            <p class="text-center mb-50">*Estas son muestras estáticas representando obras disponibles. Para compras reales, por favor contácteme directamente.</p>
+            
+            <div class="gallery-grid">
+                <div class="store-item">
+                    <img src="imagenes/obra1.JPG" alt="Obra 1" class="store-image">
+                    <h3 class="artwork-title">Paisaje que Afecta I</h3>
+                    <div class="artwork-info">Óleo sobre lienzo, 60x80 cm</div>
+                    <p class="artwork-description">Una exploración visual de la relación entre el color y la emoción. Esta pieza captura la intensidad de los sentimientos humanos a través de una paleta vibrante y formas orgánicas.</p>
+                    <div class="price">€2,500</div>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="store-item">
+                    <img src="imagenes/obra2.JPG" alt="Obra 2" class="store-image">
+                    <h3 class="artwork-title">Paisaje que Afecta II</h3>
+                    <div class="artwork-info">Acrílico sobre madera, 50x70 cm</div>
+                    <p class="artwork-description">Representación introspectiva del entorno natural intervenido. Esta obra invita al espectador a reflexionar sobre nuestra relación con la naturaleza y cómo la transformamos.</p>
+                    <div class="price">€1,800</div>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="store-item">
+                    <img src="imagenes/obra3.JPG" alt="Obra 3" class="store-image">
+                    <h3 class="artwork-title">Fragmentos de Memoria</h3>
+                    <div class="artwork-info">Técnica mixta sobre tela, 70x90 cm</div>
+                    <p class="artwork-description">Una colección de recuerdos fragmentados que se entrelazan en un diálogo visual. Cada elemento representa un momento significativo en el proceso creativo.</p>
+                    <div class="price">€3,200</div>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="store-item">
+                    <img src="imagenes/serie1.JPG" alt="Serie 1" class="store-image">
+                    <h3 class="artwork-title">Paisajes Emocionales (Edición Limitada)</h3>
+                    <div class="artwork-info">Impresión giclée, 50x70 cm</div>
+                    <p class="artwork-description">Edición limitada de la serie "Paisajes Emocionales". Impresión de alta calidad en papel de algodón, firmada y numerada por el artista.</p>
+                    <div class="price">€800</div>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="store-item">
+                    <img src="imagenes/serie2.JPG" alt="Serie 2" class="store-image">
+                    <h3 class="artwork-title">Fragmentos de Identidad (Edición Limitada)</h3>
+                    <div class="artwork-info">Impresión giclée, 50x70 cm</div>
+                    <p class="artwork-description">Edición limitada de la serie "Fragmentos de Identidad". Impresión de alta calidad en papel de algodón, firmada y numerada por el artista.</p>
+                    <div class="price">€800</div>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+                
+                <div class="store-item">
+                    <img src="imagenes/serie3.JPG" alt="Serie 3" class="store-image">
+                    <h3 class="artwork-title">Memorias del Futuro (Edición Limitada)</h3>
+                    <div class="artwork-info">Impresión giclée, 50x70 cm</div>
+                    <p class="artwork-description">Edición limitada de la serie "Memorias del Futuro". Impresión de alta calidad en papel de algodón, firmada y numerada por el artista.</p>
+                    <div class="price">€800</div>
+                    <button class="add-to-cart">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <div class="text-center mt-40">
+                <p>Para compras de obras originales o información sobre ediciones limitadas, por favor contácteme directamente a través de la página de contacto.</p>
+                <a href="contacto.html" class="btn">Contactar para Compras</a>
+            </div>
+        </div>
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        // Add hover effects to buttons
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#b71c1c';
+            });
+            button.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '#d32f2f';
+            });
+            
+            button.addEventListener('click', function() {
+                alert('Esta es una versión de muestra. Para compras reales, por favor contacte directamente.');
+            });
+        });
+    </script>
 </body>
 </html>
