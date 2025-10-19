@@ -1,37 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de la Página</title>
-    <!-- Enlaza tus estilos CSS -->
+    <title>Series - Pina Maldonado</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <main class="main-container">
         <header class="header">
-            <!-- Envuelve la imagen con un enlace a la página de inicio -->
             <a href="index.html">
-                <img loading="lazy" srcset="imagenes/firma3.png" class="image" alt="Descripción de la imagen de firma3" />
+                <img loading="lazy" srcset="imagenes/firma3.png" class="image" alt="Pina Maldonado - Arte Contemporáneo" />
             </a>
-            <!-- Menú de navegación -->
             <nav class="nav">
                 <a href="series.html" class="nav-link">SERIES</a>
-                <a href="exposiciones.html" class="nav-link">EXPOSICIONES</a>
+                <a href="exhibiciones.html" class="nav-link">EXHIBICIONES</a>
                 <a href="acerca_de.html" class="nav-link">ACERCA DE</a>
                 <a href="contacto.html" class="nav-link">CONTACTO</a>
             </nav>
-            <!-- Botón para la tienda -->
             <button class="button"><a href="tienda.html" style="text-decoration:none; color: inherit;">TIENDA</a></button>
         </header>
         
-        <!-- Contenido de la página -->
-        <!-- ... Tu contenido va aquí ... -->
-
+        <div class="page-content">
+            <h1 class="section-title">Mis Series Artísticas</h1>
+            
+            <div class="artwork-card">
+                <img src="imagenes/serie1.JPG" alt="Serie 1" class="artwork-image">
+                <h2 class="artwork-title">Paisajes Emocionales</h2>
+                <p class="artwork-description">Esta serie explora cómo las emociones pueden ser representadas visualmente a través del color, la textura y la composición. Cada pieza es una expresión única de sentimientos internos manifestados en el espacio físico.</p>
+                <p>La serie consta de 12 obras realizadas entre 2020 y 2022, utilizando técnicas mixtas que combinan óleo, acrílico y elementos collage.</p>
+            </div>
+            
+            <div class="artwork-card">
+                <img src="imagenes/serie2.JPG" alt="Serie 2" class="artwork-image">
+                <h2 class="artwork-title">Fragmentos de Identidad</h2>
+                <p class="artwork-description">Una exploración profunda de la identidad personal y colectiva en la era digital. Las obras de esta serie utilizan formas geométricas y patrones repetitivos para representar la fragmentación de la identidad en el mundo contemporáneo.</p>
+                <p>Realizada entre 2021 y 2023, esta serie ha sido exhibida en varias galerías internacionales y ha recibido reconocimiento por su enfoque innovador.</p>
+            </div>
+            
+            <div class="artwork-card">
+                <img src="imagenes/serie3.JPG" alt="Serie 3" class="artwork-image">
+                <h2 class="artwork-title">Memorias del Futuro</h2>
+                <p class="artwork-description">Una visión anticipatoria de lo que podría ser nuestro futuro, basada en nuestras acciones presentes. Esta serie combina elementos de ciencia ficción con realismo mágico para crear paisajes imaginarios que reflejan nuestras esperanzas y temores.</p>
+                <p>Las obras de esta serie fueron creadas utilizando técnicas digitales combinadas con pintura tradicional, creando una fusión única de medios.</p>
+            </div>
+        </div>
     </main>
     
-    <!-- Scripts y enlaces a bibliotecas externas -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <!-- Elimina el script del carrusel slick -->
 </body>
 </html>
