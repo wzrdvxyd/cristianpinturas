@@ -20,6 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    padding-top: 80px; /* Evita que el contenido se solape con el header fijo */
 }
 
 /* ===== HEADER (FIXED, NO SHADOW INITIALLY) ===== */
@@ -447,5 +448,6 @@ body:not(.loading) .carousel-container {
         padding: 40px 20px;
     }
 }
+
 
 
