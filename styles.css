@@ -136,13 +136,16 @@ body:not(.loading) .carousel-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #f8f8f8; /* Fondo sólido por si una imagen falla */
 }
 
 .carousel-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Cambiado de cover a contain para evitar distorsión */
     object-position: center;
+    border: none;
+    background-color: #f8f8f8; /* Fondo sólido por si la imagen no carga */
 }
 
 .hero-overlay {
@@ -158,6 +161,7 @@ body:not(.loading) .carousel-container {
     text-align: center;
     padding: 20px;
     color: white;
+    /* Eliminamos el gradiente oscuro */
 }
 
 .hero-title {
@@ -592,6 +596,7 @@ body:not(.loading) .carousel-container {
 .lightbox-close:hover {
     background: rgba(0,0,0,0.9);
 }
+
 
 
 
