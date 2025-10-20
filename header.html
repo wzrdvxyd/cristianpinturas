@@ -13,10 +13,10 @@
 </header>
 
 <script>
-    // Script para ocultar el header al scrollear
     document.addEventListener('DOMContentLoaded', function() {
         const heroSection = document.getElementById('hero-section');
         const header = document.getElementById('header');
+        const mainContainer = document.querySelector('.main-container');
 
         // Si no hay hero-section (en otras páginas), usa un valor predeterminado
         const heroHeight = heroSection ? heroSection.offsetHeight : 600;
@@ -31,5 +31,10 @@
                 header.style.transform = 'translateY(0)';
             }
         });
+
+        // Añade padding-top al main-container para que no se solape con el header
+        if (mainContainer) {
+            mainContainer.style.paddingTop = '80px'; // Ajusta según altura del header
+        }
     });
 </script>
