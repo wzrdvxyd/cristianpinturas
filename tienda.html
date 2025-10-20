@@ -5,28 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda - Christian Peña Maldonado</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap Icons (para los íconos) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Lightbox CSS (simple modal) -->
+    <style>
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+            border: 3px solid white;
+            box-shadow: 0 0 20px rgba(255,255,255,0.5);
+            cursor: pointer;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: white;
+            background: rgba(0,0,0,0.7);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 2001;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(0,0,0,0.9);
+        }
+    </style>
 </head>
 <body>
     <main class="main-container">
-       <!-- INCLUYE EL HEADER DINÁMICAMENTE -->
-<div id="header-placeholder"></div>
+        <!-- INCLUYE EL HEADER DINÁMICAMENTE -->
+        <div id="header-placeholder"></div>
 
-<script>
-    fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('header-placeholder').innerHTML = data;
-        })
-        .catch(err => console.error('Error al cargar header:', err));
-</script>
-        
-        <div class="page-content">
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(err => console.error('Error al cargar header:', err));
+        </script>
+
+        <!-- TIENDA SECTION -->
+        <section class="page-content">
             <h1 class="section-title">Tienda de Arte</h1>
             <p class="text-center mb-50">*Estas son muestras estáticas representando obras disponibles. Para compras reales, por favor contácteme directamente.</p>
             
             <div class="gallery-grid">
+                <!-- Obra 1 -->
                 <div class="store-item">
-                    <img src="imagenes/obra1.JPG" alt="Obra 1" class="store-image">
+                    <div class="store-image-wrapper">
+                        <img src="imagenes/tienda1.jpg" alt="Paisaje que Afecta I" class="store-image" data-full="imagenes/tienda1.jpg">
+                        <div class="image-overlay">
+                            <span>Ver en tamaño completo</span>
+                        </div>
+                    </div>
                     <h3 class="artwork-title">Paisaje que Afecta I</h3>
                     <div class="artwork-info">Óleo sobre lienzo, 60x80 cm</div>
                     <p class="artwork-description">Una exploración visual de la relación entre el color y la emoción. Esta pieza captura la intensidad de los sentimientos humanos a través de una paleta vibrante y formas orgánicas.</p>
@@ -34,8 +89,14 @@
                     <button class="add-to-cart">Agregar al carrito</button>
                 </div>
                 
+                <!-- Obra 2 -->
                 <div class="store-item">
-                    <img src="imagenes/obra2.JPG" alt="Obra 2" class="store-image">
+                    <div class="store-image-wrapper">
+                        <img src="imagenes/tienda2.jpg" alt="Paisaje que Afecta II" class="store-image" data-full="imagenes/tienda2.jpg">
+                        <div class="image-overlay">
+                            <span>Ver en tamaño completo</span>
+                        </div>
+                    </div>
                     <h3 class="artwork-title">Paisaje que Afecta II</h3>
                     <div class="artwork-info">Acrílico sobre madera, 50x70 cm</div>
                     <p class="artwork-description">Representación introspectiva del entorno natural intervenido. Esta obra invita al espectador a reflexionar sobre nuestra relación con la naturaleza y cómo la transformamos.</p>
@@ -43,8 +104,14 @@
                     <button class="add-to-cart">Agregar al carrito</button>
                 </div>
                 
+                <!-- Obra 3 -->
                 <div class="store-item">
-                    <img src="imagenes/obra3.JPG" alt="Obra 3" class="store-image">
+                    <div class="store-image-wrapper">
+                        <img src="imagenes/tienda3.jpg" alt="Fragmentos de Memoria" class="store-image" data-full="imagenes/tienda3.jpg">
+                        <div class="image-overlay">
+                            <span>Ver en tamaño completo</span>
+                        </div>
+                    </div>
                     <h3 class="artwork-title">Fragmentos de Memoria</h3>
                     <div class="artwork-info">Técnica mixta sobre tela, 70x90 cm</div>
                     <p class="artwork-description">Una colección de recuerdos fragmentados que se entrelazan en un diálogo visual. Cada elemento representa un momento significativo en el proceso creativo.</p>
@@ -52,8 +119,14 @@
                     <button class="add-to-cart">Agregar al carrito</button>
                 </div>
                 
+                <!-- Obra 4 -->
                 <div class="store-item">
-                    <img src="imagenes/serie_horizonte.jpg" alt="Horizonte Progresivo" class="store-image">
+                    <div class="store-image-wrapper">
+                        <img src="imagenes/tienda4.jpg" alt="Horizonte Progresivo" class="store-image" data-full="imagenes/tienda4.jpg">
+                        <div class="image-overlay">
+                            <span>Ver en tamaño completo</span>
+                        </div>
+                    </div>
                     <h3 class="artwork-title">Horizonte Progresivo (Edición Limitada)</h3>
                     <div class="artwork-info">Impresión giclée, 50x70 cm</div>
                     <p class="artwork-description">Edición limitada de la serie "Horizonte Progresivo". Impresión de alta calidad en papel de algodón, firmada y numerada por el artista.</p>
@@ -61,8 +134,14 @@
                     <button class="add-to-cart">Agregar al carrito</button>
                 </div>
                 
+                <!-- Obra 5 -->
                 <div class="store-item">
-                    <img src="imagenes/serie_paisaje.jpg" alt="Paisaje que Afecta" class="store-image">
+                    <div class="store-image-wrapper">
+                        <img src="imagenes/tienda5.jpg" alt="Paisaje que Afecta" class="store-image" data-full="imagenes/tienda5.jpg">
+                        <div class="image-overlay">
+                            <span>Ver en tamaño completo</span>
+                        </div>
+                    </div>
                     <h3 class="artwork-title">Paisaje que Afecta (Edición Limitada)</h3>
                     <div class="artwork-info">Impresión giclée, 50x70 cm</div>
                     <p class="artwork-description">Edición limitada de la serie "Paisaje que Afecta". Impresión de alta calidad en papel de algodón, firmada y numerada por el artista.</p>
@@ -70,8 +149,14 @@
                     <button class="add-to-cart">Agregar al carrito</button>
                 </div>
                 
+                <!-- Obra 6 -->
                 <div class="store-item">
-                    <img src="imagenes/serie_rio.jpg" alt="Río Abajo" class="store-image">
+                    <div class="store-image-wrapper">
+                        <img src="imagenes/tienda6.jpg" alt="Río Abajo" class="store-image" data-full="imagenes/tienda6.jpg">
+                        <div class="image-overlay">
+                            <span>Ver en tamaño completo</span>
+                        </div>
+                    </div>
                     <h3 class="artwork-title">Río Abajo (Edición Limitada)</h3>
                     <div class="artwork-info">Impresión giclée, 50x70 cm</div>
                     <p class="artwork-description">Edición limitada de la serie "Río Abajo". Impresión de alta calidad en papel de algodón, firmada y numerada por el artista.</p>
@@ -84,9 +169,15 @@
                 <p>Para compras de obras originales o información sobre ediciones limitadas, por favor contácteme directamente a través de la página de contacto.</p>
                 <a href="contacto.html" class="btn">Contactar para Compras</a>
             </div>
-        </div>
+        </section>
     </main>
     
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-close">&times;</div>
+        <img id="lightbox-img" src="" alt="Imagen completa">
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
         // Add hover effects to buttons
@@ -101,6 +192,43 @@
             button.addEventListener('click', function() {
                 alert('Esta es una versión de muestra. Para compras reales, por favor contacte directamente.');
             });
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.querySelector('.lightbox-close');
+
+        // Open lightbox on image click
+        document.querySelectorAll('.store-image').forEach(img => {
+            img.addEventListener('click', function() {
+                const fullSrc = this.getAttribute('data-full');
+                lightboxImg.src = fullSrc;
+                lightbox.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Prevent scrolling while lightbox is open
+            });
+        });
+
+        // Close lightbox
+        lightboxClose.addEventListener('click', function() {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
         });
     </script>
 </body>
