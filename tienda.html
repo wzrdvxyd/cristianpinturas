@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda - Christian Peña Maldonado</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Bootstrap Icons (para los íconos) -->
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!-- Lightbox CSS (simple modal) -->
+    <!-- Lightbox CSS -->
     <style>
         .lightbox {
             display: none;
@@ -21,6 +21,7 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
+            overflow: auto;
         }
 
         .lightbox img {
@@ -30,6 +31,11 @@
             border: 3px solid white;
             box-shadow: 0 0 20px rgba(255,255,255,0.5);
             cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .lightbox img:hover {
+            transform: scale(1.02);
         }
 
         .lightbox-close {
@@ -70,7 +76,7 @@
 
         <!-- TIENDA SECTION -->
         <section class="page-content">
-            <h1 class="section-title">Tienda</h1>
+            <h1 class="section-title">Tienda de Arte</h1>
             <p class="text-center mb-50">*Estas son muestras estáticas representando obras disponibles. Para compras reales, por favor contácteme directamente.</p>
             
             <div class="gallery-grid">
@@ -233,7 +239,5 @@
     </script>
 </body>
 </html>
-
-
 
 
