@@ -10,27 +10,26 @@
 </head>
 <body class="loading">
     <main class="main-container">
-    
-     <!-- INCLUYE EL HEADER DINÁMICAMENTE -->
-<div id="header-placeholder"></div>
+        <!-- INCLUYE EL HEADER DINÁMICAMENTE -->
+        <div id="header-placeholder"></div>
 
-<script>
-    fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('header-placeholder').innerHTML = data;
-        })
-        .catch(err => console.error('Error al cargar header:', err));
-</script>
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(err => console.error('Error al cargar header:', err));
+        </script>
 
         <!-- HERO SECTION (FULL SCREEN IMAGES ONLY) -->
         <section class="hero-section" id="hero-section">
             <div class="carousel-container">
-                <div><img src="imagenes/carusel1.JPG" alt="Obra 1"></div>
-                <div><img src="imagenes/carusel2.JPG" alt="Obra 2"></div>
-                <div><img src="imagenes/carusel3.JPG" alt="Obra 3"></div>
-                <div><img src="imagenes/carusel4.JPG" alt="Obra 4"></div>
-                <div><img src="imagenes/carusel5.JPG" alt="Obra 5"></div>
+                <div><img src="imagenes/fotocarrusel1.jpg" alt="Obra 1"></div>
+                <div><img src="imagenes/fotocarrusel2.jpg" alt="Obra 2"></div>
+                <div><img src="imagenes/fotocarrusel3.jpg" alt="Obra 3"></div>
+                <div><img src="imagenes/fotocarrusel4.jpg" alt="Obra 4"></div>
+                <div><img src="imagenes/fotocarrusel5.jpg" alt="Obra 5"></div>
             </div>
             <div class="hero-overlay">
                 <h1 class="hero-title">PEÑA MALDONADO</h1>
@@ -169,8 +168,5 @@
     </script>
 </body>
 </html>
-
-
-
 
 
