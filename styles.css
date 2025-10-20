@@ -20,10 +20,10 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding-top: 80px; /* Evita que el contenido se solape con el header fijo */
+    padding-top: 80px; /* Para evitar solapamiento con header fijo */
 }
 
-/* ===== HEADER (FIXED, NO SHADOW INITIALLY) ===== */
+/* ===== HEADER ===== */
 .header {
     background-color: rgba(255,255,255,0.95);
     display: flex;
@@ -38,11 +38,6 @@ body {
     right: 0;
     z-index: 1000;
     transition: opacity 0.3s ease, transform 0.3s ease;
-}
-/* Header se vuelve blanco puro y con sombra al scrollear */
-body.scrolled .header {
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 @media (max-width: 991px) {
@@ -112,23 +107,7 @@ body.scrolled .header {
     background-color: #f0f0f0;
 }
 
-/* ===== CARROUSEL ===== */
-.carousel-container {
-    display: none;
-}
-
-.slick-initialized .carousel-container {
-    display: flex;
-}
-
-body.loading .carousel-container {
-    display: none;
-}
-
-body:not(.loading) .carousel-container {
-    display: flex;
-}
-
+/* ===== HERO SECTION ===== */
 .hero-section {
     position: relative;
     height: 100vh;
@@ -136,59 +115,82 @@ body:not(.loading) .carousel-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f8f8f8; /* Fondo sólido por si una imagen falla */
+    background-color: #f9f9f9;
 }
 
-.carousel-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Cambiado de cover a contain para evitar distorsión */
-    object-position: center;
-    border: none;
-    background-color: #f8f8f8; /* Fondo sólido por si la imagen no carga */
-}
-
-.hero-overlay {
+.carousel-simple {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    max-width: 90%;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 2;
     text-align: center;
+    color: #000;
+    background-color: rgba(255,255,255,0.85);
     padding: 20px;
-    color: white;
-    /* Eliminamos el gradiente oscuro */
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    letter-spacing: 2px;
     margin-bottom: 10px;
     text-transform: uppercase;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-    padding: 15px 0;
 }
 
 .hero-subtitle {
     font-size: 1.2rem;
     font-weight: 500;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-transform: uppercase;
 }
 
 .hero-btn {
     background-color: #d32f2f;
     color: white;
-    padding: 12px 30px;
+    padding: 10px 24px;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
 }
 
 .scroll-down {
@@ -197,9 +199,8 @@ body:not(.loading) .carousel-container {
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    margin-top: 40px;
+    margin-top: 30px;
     opacity: 0.8;
-    transition: opacity 0.3s ease;
 }
 
 .scroll-down:hover {
@@ -215,7 +216,7 @@ body:not(.loading) .carousel-container {
 .scroll-down svg {
     width: 24px;
     height: 24px;
-    stroke: white;
+    stroke: #333;
 }
 
 /* ===== LAYOUT GENERAL ===== */
@@ -249,7 +250,7 @@ body:not(.loading) .carousel-container {
     color: #777;
 }
 
-/* ===== WORKS SECTION (WHITE BACKGROUND) ===== */
+/* ===== WORKS SECTION ===== */
 .works-section {
     background-color: #ffffff;
     color: #333;
@@ -303,7 +304,7 @@ body:not(.loading) .carousel-container {
     color: #555;
 }
 
-/* ===== EXHIBITIONS SECTION (WHITE BACKGROUND) ===== */
+/* ===== EXHIBITIONS SECTION ===== */
 .exhibitions-section {
     background-color: #ffffff;
     color: #333;
@@ -326,7 +327,7 @@ body:not(.loading) .carousel-container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 250px;
+    min-height: 180px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
@@ -335,26 +336,9 @@ body:not(.loading) .carousel-container {
     background-color: #fff;
 }
 
-.exhibition-icon {
-    width: 60px;
-    height: 60px;
-    background-color: #e0e0e0;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    color: #00ffcc;
-}
-
-.exhibition-icon svg {
-    width: 30px;
-    height: 30px;
-}
-
 .exhibition-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
     text-transform: uppercase;
 }
 
@@ -404,15 +388,6 @@ body:not(.loading) .carousel-container {
     background-color: #555;
 }
 
-.hero-btn {
-    background-color: #d32f2f;
-    color: white;
-    padding: 12px 30px;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .hero-title {
@@ -452,152 +427,3 @@ body:not(.loading) .carousel-container {
         padding: 40px 20px;
     }
 }
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.store-item {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-}
-
-.store-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
-}
-
-.store-image-wrapper {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    cursor: pointer;
-}
-
-.store-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.store-image:hover {
-    transform: scale(1.05);
-}
-
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    color: white;
-    font-weight: 500;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.store-image-wrapper:hover .image-overlay {
-    opacity: 1;
-}
-
-.artwork-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #222;
-}
-
-.artwork-info {
-    font-size: 0.9em;
-    color: #777;
-    margin-bottom: 10px;
-}
-
-.artwork-description {
-    font-size: 0.95em;
-    color: #555;
-}
-
-.price {
-    font-weight: bold;
-    color: #d32f2f;
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-.add-to-cart {
-    background-color: #d32f2f;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-.add-to-cart:hover {
-    background-color: #b71c1c;
-}
-
-/* ===== LIGHTBOX STYLES ===== */
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.9);
-    z-index: 2000;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.lightbox img {
-    max-width: 90%;
-    max-height: 90vh;
-    object-fit: contain;
-    border: 3px solid white;
-    box-shadow: 0 0 20px rgba(255,255,255,0.5);
-    cursor: pointer;
-}
-
-.lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
-    color: white;
-    background: rgba(0,0,0,0.7);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 2001;
-}
-
-.lightbox-close:hover {
-    background: rgba(0,0,0,0.9);
-}
-
-
-
-
-
