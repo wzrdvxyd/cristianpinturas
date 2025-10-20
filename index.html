@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christian Peña Maldonado — Arte Contemporáneo</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
-<body class="loading">
+<body>
     <main class="main-container">
         <!-- INCLUYE EL HEADER DINÁMICAMENTE -->
         <div id="header-placeholder"></div>
@@ -22,21 +20,31 @@
                 .catch(err => console.error('Error al cargar header:', err));
         </script>
 
-        <!-- HERO SECTION (FULL SCREEN IMAGES ONLY) -->
+        <!-- HERO SECTION CON CARRUSEL SIMPLE -->
         <section class="hero-section" id="hero-section">
-            <div class="carousel-container">
-                <div><img src="imagenes/fotocarrusel1.JPG" alt="Obra 1"></div>
-                <div><img src="imagenes/fotocarrusel2.JPG" alt="Obra 2"></div>
-                <div><img src="imagenes/fotocarrusel3.JPG" alt="Obra 3"></div>
-                <div><img src="imagenes/fotocarrusel4.JPG" alt="Obra 4"></div>
-                <div><img src="imagenes/fotocarrusel5.JPG" alt="Obra 5"></div>
+            <div class="carousel-simple">
+                <div class="carousel-slide active">
+                    <img src="imagenes/fotocarrusel1.JPG" alt="Obra 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="imagenes/fotocarrusel2.JPG" alt="Obra 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="imagenes/fotocarrusel3.JPG" alt="Obra 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="imagenes/fotocarrusel4.JPG" alt="Obra 4">
+                </div>
+                <div class="carousel-slide">
+                    <img src="imagenes/fotocarrusel5.JPG" alt="Obra 5">
+                </div>
             </div>
             <div class="hero-overlay">
                 <h1 class="hero-title">PEÑA MALDONADO</h1>
                 <p class="hero-subtitle">PINTOR</p>
                 <a href="#series" class="btn hero-btn">VER SERIES</a>
                 <div class="scroll-down">
-                    <span>Conoce mas</span>
+                    <span>Conoce más</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 19l7-7 3 3M12 5v14"></path>
                     </svg>
@@ -44,7 +52,7 @@
             </div>
         </section>
 
-        <!-- WORKS SECTION (WHITE BACKGROUND) -->
+        <!-- WORKS SECTION -->
         <section id="series" class="works-section">
             <div class="page-content">
                 <h2 class="section-title">ÚLTIMAS SERIES</h2>
@@ -61,7 +69,7 @@
                             <h3>OBRA 2</h3>
                             <p>Acrílico sobre madera, 50x70 cm. Representación introspectiva del entorno natural intervenido.</p>
                         </div>
-                        <img src="imagenes/obra2.JPG" alt="Rio Abajo" class="work-image">
+                        <img src="imagenes/obra2.JPG" alt="Río Abajo" class="work-image">
                     </div>
                     <div class="work-item">
                         <img src="imagenes/obra3.JPG" alt="Conexiones Temporales" class="work-image">
@@ -74,42 +82,23 @@
             </div>
         </section>
 
-        <!-- EXHIBITIONS SECTION (WHITE BACKGROUND) -->
+        <!-- EXHIBITIONS SECTION -->
         <section class="exhibitions-section">
             <div class="page-content">
                 <h2 class="section-title">ÚLTIMAS EXHIBICIONES</h2>
                 <p class="section-subtitle">Participación en exposiciones recientes en galerías de arte contemporáneo.</p>
                 <div class="exhibitions-grid">
                     <div class="exhibition-card">
-                        <div class="exhibition-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                <line x1="16" y1="2" x2="16" y2="6"></line>
-                                <line x1="8" y1="2" x2="8" y2="6"></line>
-                                <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg>
-                        </div>
-                        <h3>EXPOSICIÓN 1</h3>
-                        <p>Del 1 al 30 de octubre de 2024.<br>Galería de Arte Contemporáneo.</p>
+                        <h3>2024: CONEXIONES TEMPORALES</h3>
+                        <p>Sala David Stitchkin Branover, Pinacoteca Universidad de Concepción</p>
                     </div>
                     <div class="exhibition-card">
-                        <div class="exhibition-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                        </div>
-                        <h3>EXPOSICIÓN 2</h3>
-                        <p>Del 15 al 30 de noviembre de 2024.<br>Centro Cultural de la Ciudad.</p>
+                        <h3>2023: PAISAJE QUE AFECTA</h3>
+                        <p>Centro Cultural Municipal de Los Ángeles</p>
                     </div>
                     <div class="exhibition-card">
-                        <div class="exhibition-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 3c5 1.5 5-2.5 7-3M3 4l9 6 9-6M4 4h8v12h-8V4z"></path>
-                            </svg>
-                        </div>
-                        <h3>EXPOSICIÓN 3</h3>
-                        <p>Del 1 al 15 de diciembre de 2024.<br>Museo de Arte Moderno.</p>
+                        <h3>2023: RÍO ABAJO</h3>
+                        <p>Goethe Zentrum Concepción</p>
                     </div>
                 </div>
             </div>
@@ -126,44 +115,46 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('body').removeClass('loading');
-            $('.carousel-container').slick({
-                dots: false,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                swipe: true,
-                autoplay: true,
-                autoplaySpeed: 4000
-            });
+        // Carrusel simple
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
 
-            // Smooth scroll to sections
-            $('.scroll-down').click(function(e) {
-                e.preventDefault();
-                $('html, body').animate({
-                    scrollTop: $('#series').offset().top - 80
-                }, 800);
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
             });
+        }
 
-            // Hide header when scrolling past hero section
-            const heroSection = document.getElementById('hero-section');
-            const header = document.getElementById('header');
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
 
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > heroSection.offsetHeight) {
-                    header.style.opacity = '0';
-                    header.style.transform = 'translateY(-100%)';
-                    header.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-                } else {
-                    header.style.opacity = '1';
-                    header.style.transform = 'translateY(0)';
-                }
-            });
+        // Cambia cada 4 segundos
+        setInterval(nextSlide, 4000);
+
+        // Smooth scroll
+        $('.scroll-down').click(function(e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $('#series').offset().top - 80
+            }, 800);
+        });
+
+        // Ocultar header al scrollear
+        const heroSection = document.getElementById('hero-section');
+        const header = document.getElementById('header');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > heroSection.offsetHeight) {
+                header.style.opacity = '0';
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.opacity = '1';
+                header.style.transform = 'translateY(0)';
+            }
         });
     </script>
 </body>
